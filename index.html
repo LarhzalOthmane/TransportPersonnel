@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+		</script>
+	<link rel="stylesheet" type="text/css" href="./app.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<script src="./index.js" type="module"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-wPhSditxIw4NCaDAJBmIQyekLLnsJII&libraries=geometry"></script>
+	<!-- <script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpz6iHJZL7Cz6rRM2pEvyi-EIdz9XUyhI&libraries=geometry"></script> -->
+	<title>Ramble On</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-dark fixed-bottom">
+		<ul class="nav navbar-nav m-auto ">
+			<li class="nav-item mx-2 my-auto">
+				<span class="d-flex">
+					<p class="nav-link mx-2">Routes:</p>
+					<select class="form-control mx-2" id="presets" name="presets">
+						<option value="1">Meknes</option>
+						<option value="2">Casablanca</option>
+						<option value="3">Mohammedia</option>
+					</select>
+				</span>
+			</li>
+			<li class="nav-item mx-2 my-auto">
+				<span>
+					<input class="m-auto w-100" id="num-evals" value="67" type="range" min="0" max="100" /> <br />
+					<span class="nav-link">Number of evaluations: <span id="display-num-evals">10000</span></span>
+				</span>
+			</li>
+			<li class="nav-item mx-2 my-auto">
+				<a href="#" class="nav-link" id="runGoog">Optimiser le chemin</a>
+			</li>
+			<li class="nav-item mx-2 my-auto">
+				<a href="#" class="nav-link" id="clear-map">Effacer la carte</a>
+			</li>
+		</ul>
+	</nav>
+	<div id="map" class="w-100"></div>
+</body>
+
+</html>
